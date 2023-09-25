@@ -125,7 +125,7 @@ public class Program
         {
                 new Uri("https://vpc-imcd-non-prod-os-4dnsyy2e7wnebm4mtxq5jezpke.eu-central-1.es.amazonaws.com/")
             }))
-            .DefaultIndex("your_topdesk-index")
+            .DefaultIndex("your_topdesk-index")//Migration from old domain of OS to the new domain impacts this app. Reason = The indexes have been deleted in OS. It's easier to log new data and generate an index then
             .BasicAuthentication("topdesk_username", "topdesk_password");//change Auth if needed for prod
         var client = new ElasticClient(connectionSettings);
 
